@@ -11,10 +11,26 @@ import { ContentHeaderModule } from 'app/layout/components/content-header/conten
 import { AuthenticationModule } from './authentication/authentication.module';
 import { MiscellaneousModule } from './miscellaneous/miscellaneous.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { DevisListComponent } from './devis-module/components/devis-list/devis-list.component';
+import { DevisListItemComponent } from './devis-module/components/devis-list-item/devis-list-item.component';
+import { ClientSelectionComponent } from './devis-module/components/client-selection/client-selection.component';
+import { ProductLinesEditorComponent } from './devis-module/components/product-lines-editor/product-lines-editor.component';
+import { AddClientModalComponent } from './devis-module/components/add-client-modal/add-client-modal.component';
+import { AddProductModalComponent } from './devis-module/components/add-product-modal/add-product-modal.component';
+import { DevisListContainerComponent } from './devis-module/containers/devis-list-container/devis-list-container.component';
+import { DevisFormContainerComponent } from './devis-module/containers/devis-form-container/devis-form-container.component';
 
 @NgModule({
   declarations: [
-    DashboardComponent
+    DashboardComponent,
+    DevisListComponent,
+    DevisListItemComponent,
+    ClientSelectionComponent,
+    ProductLinesEditorComponent,
+    AddClientModalComponent,
+    AddProductModalComponent,
+    DevisListContainerComponent,
+    DevisFormContainerComponent
   ],
   imports: [
     CommonModule,
