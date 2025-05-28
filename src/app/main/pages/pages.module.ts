@@ -17,8 +17,9 @@ import { ClientSelectionComponent } from './devis-module/components/client-selec
 import { ProductLinesEditorComponent } from './devis-module/components/product-lines-editor/product-lines-editor.component';
 import { AddClientModalComponent } from './devis-module/components/add-client-modal/add-client-modal.component';
 import { AddProductModalComponent } from './devis-module/components/add-product-modal/add-product-modal.component';
-import { DevisListContainerComponent } from './devis-module/containers/devis-list-container/devis-list-container.component';
 import { DevisFormContainerComponent } from './devis-module/containers/devis-form-container/devis-form-container.component';
+import {RouterModule} from "@angular/router";
+import {DevisModule} from "./devis-module/devis.module";
 
 @NgModule({
   declarations: [
@@ -29,10 +30,10 @@ import { DevisFormContainerComponent } from './devis-module/containers/devis-for
     ProductLinesEditorComponent,
     AddClientModalComponent,
     AddProductModalComponent,
-    DevisListContainerComponent,
-    DevisFormContainerComponent
+    DevisFormContainerComponent,
   ],
   imports: [
+    RouterModule,
     CommonModule,
     CoreCommonModule,
     ContentHeaderModule,
@@ -40,7 +41,11 @@ import { DevisFormContainerComponent } from './devis-module/containers/devis-for
     NgSelectModule,
     FormsModule,
     AuthenticationModule,
-    MiscellaneousModule
+    MiscellaneousModule,
+    DevisModule
+  ],
+  exports: [
+    DevisListComponent
   ],
 
   providers: []
